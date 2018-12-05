@@ -16,25 +16,14 @@ public class RecursiveFactorial {
         System.out.println("Enter a non-negative number");
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int f = fib(n);
-        System.out.printf("Factorial of %d is %d\n", n, f);
+        int a = fac(n);
+        System.out.printf("The factorial of %d is %d\n", n, a);
     }
-    
-    public static int fib(int n){
-        if(n==0){
-            return 1;
-        }
-        else{
-            return n * fib(n-1);
-        }
-    }
-    
-    public static int fibEf(int n){
+
+    private static int fac(int n) {
         if(n == 0)
-            return 0;
-        else if(n == 1)
             return 1;
         else
-            return fibEf(n-1) + fibEf(n-2);
+            return n * fac(n-1);
     }
-}   
+}
